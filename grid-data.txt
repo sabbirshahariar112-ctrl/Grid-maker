@@ -1,0 +1,38 @@
+Grid Maker Pro — Dynamic Grid Configuration
+=============================================
+
+DEFAULT SETTINGS:
+- Rows: 8
+- Columns: 10
+- Spacing: 72px
+
+LIMITS:
+- No hard limits on rows/columns
+- Rows: Unlimited (1 - ∞)
+- Columns: Unlimited (1 - ∞)
+- Spacing: 1px - 1000px
+
+USER OVERRIDES:
+- All values are configurable via dynamic input fields
+- Values persist in localStorage
+- Reset to defaults available
+
+GRID CONFIGURATION FORMAT:
+{
+  "name": "Grid Maker Pro",
+  "version": "2.0",
+  "defaults": {
+    "rows": 8,
+    "columns": 10,
+    "spacing": 72
+  },
+  "limits": {
+    "minRows": 1,
+    "maxRows": null,
+    "minColumns": 1,
+    "maxColumns": null,
+    "minSpacing": 1,
+    "maxSpacing": 1000
+  },
+  "storage": "localStorage"
+}
