@@ -1,38 +1,68 @@
-Grid Maker Pro — Dynamic Grid Configuration
-=============================================
+Grid Maker Pro — Advanced Grid Configuration
+==============================================
 
 DEFAULT SETTINGS:
 - Rows: 8
 - Columns: 10
-- Spacing: 72px
+- Row Spacing (Default): 2 cm
+- Column Spacing (Default): 2 cm
 
-LIMITS:
-- No hard limits on rows/columns
+UNLIMITED FEATURES:
 - Rows: Unlimited (1 - ∞)
 - Columns: Unlimited (1 - ∞)
-- Spacing: 1px - 1000px
 
-USER OVERRIDES:
-- All values are configurable via dynamic input fields
-- Values persist in localStorage
-- Reset to defaults available
+CUSTOM SPACING (per row/column):
+- Each row can have individual spacing: 0.1cm - 50cm
+- Each column can have individual spacing: 0.1cm - 50cm
+- Spacing unit: Centimeters (cm)
 
 GRID CONFIGURATION FORMAT:
 {
   "name": "Grid Maker Pro",
-  "version": "2.0",
+  "version": "3.0",
   "defaults": {
     "rows": 8,
     "columns": 10,
-    "spacing": 72
+    "rowSpacingCM": 2,
+    "columnSpacingCM": 2
   },
   "limits": {
     "minRows": 1,
     "maxRows": null,
     "minColumns": 1,
     "maxColumns": null,
-    "minSpacing": 1,
-    "maxSpacing": 1000
+    "minSpacingCM": 0.1,
+    "maxSpacingCM": 50
   },
-  "storage": "localStorage"
+  "customSpacing": {
+    "enabled": true,
+    "rowSpacings": [],
+    "columnSpacings": []
+  },
+  "storage": "localStorage",
+  "unit": "cm"
 }
+
+ROW SPACING EXAMPLE:
+[
+  { "rowNumber": 1, "spacingCM": 2 },
+  { "rowNumber": 2, "spacingCM": 2.5 },
+  { "rowNumber": 3, "spacingCM": 1.8 },
+  { "rowNumber": 4, "spacingCM": 3 }
+]
+
+COLUMN SPACING EXAMPLE:
+[
+  { "columnNumber": 1, "spacingCM": 2 },
+  { "columnNumber": 2, "spacingCM": 1.5 },
+  { "columnNumber": 3, "spacingCM": 2.2 },
+  { "columnNumber": 4, "spacingCM": 2.8 }
+]
+
+FEATURES:
+✓ সব row এবং column এর spacing আলাদা করা যাবে
+✓ প্রতিটি row/column এর জন্য individual spacing input
+✓ cm unit এ সব পরিমাপ
+✓ localStorage এ সেভ হবে
+✓ Reset to defaults option
+✓ Copy/Export functionality
